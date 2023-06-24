@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Form, ListGroup } from "react-bootstrap";
-// import { Option } from "../types";
+import { ListGroup } from "react-bootstrap";
 import { SelectItem } from "./SelectItem";
 import { useAppDispatch, useAppSelector } from "../redux/store";
 import { updateTitle, updateAllTitles } from "../redux/slice";
@@ -28,7 +27,6 @@ export const SelectList = () => {
     if (idx === title.length - 1) {
       dispatch(updateTitle({ id: idx, name: value }));
     } else {
-      //update title of the current index
       const newTitle = title.map((item: any, index: number) => {
         if (index === idx) {
           return { id: idx, name: value };

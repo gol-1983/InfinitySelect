@@ -13,7 +13,7 @@ interface SelectWithCheckboxesProps {
   idx?: number | undefined;
   onChange: (value: string, idx: number | undefined) => void;
 }
-//________________________________________________
+
 export const SelectItem: React.FC<SelectWithCheckboxesProps> = ({
   options,
   label,
